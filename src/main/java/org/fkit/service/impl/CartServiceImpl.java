@@ -1,11 +1,7 @@
 package org.fkit.service.impl;
 
 import java.util.List;
-
-import javax.management.RuntimeErrorException;
-
 import org.fkit.domain.Cart;
-import org.fkit.domain.Good;
 import org.fkit.mapper.CartMapper;
 import org.fkit.service.CartService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -80,7 +76,7 @@ public class CartServiceImpl implements CartService{
 
 
 	@Override
-	public void saveCart(int good_id, String price, String name, String detail, String image,int num,String goodtype) {
+	public void saveCart(int good_id, String price, String name, String detail, String image,int num,String goodtype,int user_id) {
 		// TODO Auto-generated method stub
 		Cart cart = new Cart();
 		cart.setGood_id(good_id);

@@ -15,8 +15,33 @@
 
     <link href="source/css/bootstrap.min.css" rel="stylesheet">
     <link href="source/css/style.css" rel="stylesheet">
-
+    <script src="source/js/jquery.1.4.2-min.js"></script>
+    <script src="source/js/jquery.cookie.js"></script>
+    
   </head>
+<script type="text/javascript">
+$(document).ready(function(){
+	if($.cookie("rmbUser")=="true"){
+		$("#ck_rmbUser").attr("checked",true);
+		$("#loginname").val($.cookie("lgn"));
+		$("#password").val($.cookie("psw"));
+	}
+});
+
+function Save(){
+	if($("#ck_rmbUser").attr("checked")){
+		var str_loginname=$("#loginname").val();
+		var str_password=$("#password").val();
+		$.cookie("rmbUser","true",{expires:7});
+		$.cookie("lgn",str_loginname,{expires:7});
+		$.cookie("psw",str_password,{expires:7});
+	}else{
+		$.cookie("rmbUser","false",{expires:-1});
+		$.cookie("lgn","",{expires:-1});
+		$.cookie("psw","",{expires:-1});
+	}
+};
+</script>
   <body>
 <span style="color:red;font-weight:bold">
 <%
@@ -100,11 +125,9 @@ if (request.getAttribute("err")!=null)
 				</div>
 				<div class="form-group form-group-lg">
 					<div class="col-sm-offset-2 col-sm-10">
-						<div class="checkbox">
-							 
+						<div class="checkbox">							 
 							<label>
-								<input type="checkbox"id="rememberpassword"
-								name="rememberpassword">记住密码
+								<input type="checkbox"id="ck_rmbUser">记住密码
 							</label>
 						</div>
 					</div>
@@ -112,7 +135,7 @@ if (request.getAttribute("err")!=null)
 				<div class="form-group form-group-lg">
 					<div class="col-sm-offset-2 col-sm-10">
 						 
-						<button type="submit" class="btn btn-default">
+						<button type="submit" class="btn btn-default" onclick="Save()">
 							登&nbsp;录
 						</button>
 						<a href="findpsw">
@@ -126,9 +149,7 @@ if (request.getAttribute("err")!=null)
 		</div>
 	</div>
 </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
+
   </body>
 </html>
 </html>

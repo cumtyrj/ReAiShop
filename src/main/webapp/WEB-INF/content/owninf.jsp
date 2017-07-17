@@ -129,6 +129,7 @@
 									
 								</tbody>
 							</table>
+							<a href="changepsw">修改密码</a>
 						</div>
 						<div class="col-md-4">
 						</div>

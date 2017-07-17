@@ -17,15 +17,7 @@
 
   </head>
   <body>
-<span style="color:red;font-weight:bold">
-<%
-if (request.getAttribute("err")!=null)
-{
-	
-	out.println(request.getAttribute("err")+"<br/>");	
-}
-%>
-</span>
+
     <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
@@ -71,37 +63,36 @@ if (request.getAttribute("err")!=null)
                 </div>
             </div>
         </div>
+        
 		<div class="col-md-4">
-			<form class="form-horizontal" role="form" method="post" action="changepsw">
-				<font color="red">${requestScope.message }</font>
+			<form class="form-horizontal" role="form" method="post"action="newpsw">
+	
 				<div class="form-group form-group-lg">
 					 
-					<label for="inputEmail1" class="col-sm-2 control-label">
-						账号：
+					<label for="password" class="col-sm-2 control-label">
+						输入新密码：
 					</label>
-					<div class="col-sm-10">
-						<input type="number" class="form-control" id="loginname" name="loginname">
-					</div>
 				
-              
-                <div class="form-group form-group-lg">
+					<div class="col-sm-10">
+						<br/><br/>
+					
+						<input type="hidden" name="loginname" value="${sessionScope.user.loginname}">
+						<font color="red">${requestScope.message }</font>
+						<input type="password" class="form-control" id="password" name="password">
+					</div>
+				</div>
 
-                    <label for="card" class="col-sm-2 control-label">
-                        原始密码：
-                    </label>
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control" id="email" name="password">
-                    </div>
-                </div>
 				<div class="form-group form-group-lg">
 					<div class="col-sm-offset-2 col-sm-10">
 						 
-						<button type="submit" class="btn btn-default">
-							确认
-						</button>
+						<a href="changepsw?loginname=${user.loginname}"><button type="submit" class="btn btn-default">
+							确定
+						</button></a>
+						<br/><br/>
 					</div>
 				</div>
 			</form>
+			
 		</div>
 </div>
 

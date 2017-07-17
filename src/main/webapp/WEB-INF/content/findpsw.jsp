@@ -82,23 +82,15 @@ if (request.getAttribute("err")!=null)
 					<div class="col-sm-10">
 						<input type="number" class="form-control" id="loginname" name="loginname">
 					</div>
-				</div>
-                <div class="form-group form-group-lg">
-
-                    <label for="phone" class="col-sm-2 control-label">
-                        电话：
-                    </label>
-                    <div class="col-sm-10">
-                        <input type="number" class="form-control" id="phone"name="phone">
-                    </div>
-                </div>
+				
+              
                 <div class="form-group form-group-lg">
 
                     <label for="card" class="col-sm-2 control-label">
-                        身份证：
+                        邮箱：
                     </label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="card" name="card">
+                        <input type="text" class="form-control" id="email" name="email">
                     </div>
                 </div>
 				<div class="form-group form-group-lg">

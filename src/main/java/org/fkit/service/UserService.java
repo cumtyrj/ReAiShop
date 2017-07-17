@@ -1,6 +1,5 @@
 package org.fkit.service;
 
-import java.util.List;
 
 import org.fkit.domain.User;
 
@@ -11,5 +10,6 @@ public interface UserService {
 	User findloginname(String loginname);
 	User updateInf(String email, String username, String phone, String loginname);
 	void updetepsw(String password, String loginname);
-
+	User lgnemail(String loginname,String email);
+	User goodemail(int user_id);
 }

@@ -1,18 +1,10 @@
 package org.fkit.mapper;
 
-import java.util.List;
-
 import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Many;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
-import org.apache.ibatis.mapping.FetchType;
-import org.fkit.domain.Cart;
-import org.fkit.domain.Good;
 import org.fkit.domain.User;
 
 /**
@@ -53,4 +45,13 @@ public interface UserMapper {
     @Update("update tb_user set username=#{username},phone=#{phone},email=#{email} where loginname=#{loginname}")
     void updateInf(User user);
     
+    //找回密码
+	@Select("select * from tb_user where loginname = #{loginname} and email = #{email}")
+	User lgnemail(@Param("loginname")String loginname,
+			@Param("email") String email);
+
+
+	//
+	@Select("select email from tb_user where user_id=#{user_id}")
+	User goodemail(@Param("user_id")int user_id);
 }

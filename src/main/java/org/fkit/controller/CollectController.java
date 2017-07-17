@@ -6,11 +6,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import org.fkit.domain.Cart;
 import org.fkit.domain.Collect;
 import org.fkit.domain.Good;
 import org.fkit.domain.User;
-import org.fkit.service.CartService;
 import org.fkit.service.CollectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

@@ -1,9 +1,6 @@
 package org.fkit.service;
 
 import java.util.List;
-
-import org.fkit.domain.Book;
-import org.fkit.domain.Cart;
 import org.fkit.domain.Good;
 
 public interface GoodService {

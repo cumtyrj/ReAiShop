@@ -1,13 +1,7 @@
 package org.fkit.service.impl;
 
 import java.util.List;
-
-import org.fkit.domain.Cart;
-import org.fkit.domain.Collect;
-import org.fkit.domain.Good;
 import org.fkit.domain.Order;
-import org.fkit.domain.User;
-import org.fkit.mapper.CartMapper;
 import org.fkit.mapper.OrderMapper;
 import org.fkit.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,11 +45,11 @@ public class OrderServiceImpl implements OrderService {
 
 	@Override
 	public void saveOrder(int good_id, String price, String name, String detail, String image,
-			 int num,String goodtype,int account,String loginname,String ordernum,String state) {
+			 int num,String goodtype,int account,String loginname,String ordernum,String state,int user_id) {
 		Order Order = new Order();
 		Order.setGood_id(good_id);
 //		Order.setUser_id(user_id);
-		orderMapper.saveOrder(good_id, price, name, detail, image, num, goodtype,account,loginname,ordernum,state);
+		orderMapper.saveOrder(good_id, price, name, detail, image, num, goodtype,account,loginname,ordernum,state,user_id);
 
 	}
 

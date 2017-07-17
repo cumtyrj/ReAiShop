@@ -8,11 +8,12 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.fkit.domain.Cart;
 import org.fkit.domain.Good;
+import org.fkit.domain.User;
 import org.fkit.service.CartService;
-import org.fkit.service.GoodService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -40,7 +41,9 @@ public class CartController {
 	}
 	
 	@RequestMapping(value = "/intocart")
-	public String save(HttpServletRequest request,Model model) {
+	public String save(HttpSession session,HttpServletRequest request,Model model) {
+		User user=(User) session.getAttribute("user");
+		int user_id=user.getUserId();
 		Good good=(Good) request.getAttribute("good");
 		String good_id = request.getParameter("good_id");
 		int good_id_ = Integer.parseInt(good_id);
@@ -53,7 +56,7 @@ public class CartController {
 		int num_ = Integer.parseInt(num);
 		Cart cart=cartService.findgoodWithId(good_id_);
 		if (cart == null) {
-			cartService.saveCart(good_id_, price, name, detail, image,num_,goodtype);
+			cartService.saveCart(good_id_, price, name, detail, image,num_,goodtype,user_id);
 		}else {
 			int _num=cart.getNum();
 			_num=_num+num_;

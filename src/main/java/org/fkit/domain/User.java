@@ -2,8 +2,6 @@ package org.fkit.domain;
 
 import java.io.Serializable;
 
-import org.hibernate.validator.constraints.Email;
-import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
 
 

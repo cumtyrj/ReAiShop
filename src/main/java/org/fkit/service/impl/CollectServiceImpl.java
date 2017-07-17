@@ -1,8 +1,6 @@
 package org.fkit.service.impl;
 
 import java.util.List;
-
-import org.fkit.domain.Cart;
 import org.fkit.domain.Collect;
 import org.fkit.mapper.CollectMapper;
 import org.fkit.service.CollectService;

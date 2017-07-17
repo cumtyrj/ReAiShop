@@ -7,8 +7,6 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
-import org.fkit.domain.Cart;
-import org.fkit.domain.Good;
 import org.fkit.domain.Order;
 
 public interface OrderMapper {
@@ -17,8 +15,8 @@ public interface OrderMapper {
 	List<Order> findAll();
 
 	    //加入购物车
-	    @Insert("insert into tb_order(good_id,name,price,detail,image,num,goodtype,account,loginname,ordernum,state) values(#{good_id},#{name},#{price},#{detail},#{image},#{num},#{goodtype},#{account},#{loginname},#{ordernum},#{state})")
-		void saveOrder(@Param("good_id") int good_id,@Param("price")String price,@Param("name")String name,@Param("detail")String detail,@Param("image")String image,@Param("num")int num,@Param("goodtype")String goodtype,@Param("account")int account,@Param("loginname")String loginname,@Param("ordernum")String ordernum,@Param("state")String state);
+	    @Insert("insert into tb_order(good_id,name,price,detail,image,num,goodtype,account,loginname,ordernum,state,user_id) values(#{good_id},#{name},#{price},#{detail},#{image},#{num},#{goodtype},#{account},#{loginname},#{ordernum},#{state},#{user_id})")
+		void saveOrder(@Param("good_id") int good_id,@Param("price")String price,@Param("name")String name,@Param("detail")String detail,@Param("image")String image,@Param("num")int num,@Param("goodtype")String goodtype,@Param("account")int account,@Param("loginname")String loginname,@Param("ordernum")String ordernum,@Param("state")String state,@Param("user_id")int uder_id);
          //通过ID寻找物品
 	    @Select("select * from tb_order where good_id=#{good_id}")
 	    Order findWithId(@Param("good_id") int good_id);
@@ -49,5 +47,4 @@ public interface OrderMapper {
 	    
 	    @Update("update tb_order set num=num+1 where good_id=#{good_id}")
 		void addCart(Order order);
-
 }

@@ -1,11 +1,6 @@
 package org.fkit.service.impl;
 
-import java.util.List;
-
-import org.apache.ibatis.session.SqlSession;
-import org.fkit.domain.Cart;
 import org.fkit.domain.User;
-import org.fkit.factory.FKSqlSessionFactory;
 import org.fkit.mapper.UserMapper;
 import org.fkit.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -87,6 +82,18 @@ public class UserServiceImpl implements UserService {
 		user.setUsername(username);
 		userMapper.updateInf(user);
 		return user;
+	}
+
+	@Override
+	public User lgnemail(String loginname, String email) {
+		// TODO Auto-generated method stub
+		return userMapper.lgnemail(loginname, email);
+	}
+
+	@Override
+	public User goodemail(int user_id) {
+		// TODO Auto-generated method stub
+		return userMapper.goodemail(user_id);
 	}
 
 
