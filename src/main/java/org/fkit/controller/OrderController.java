@@ -149,7 +149,6 @@ public class OrderController {
 		int num_ = Integer.parseInt(num);
 		Integer price_=Integer.parseInt(price.trim());
 		int account=price_*num_;
-//		orderService.findgoodWithId(good_id_);
 		String ordernum=GenerateNum.getInstance().GenerateOrder();
 		String state="未发货";
 		orderService.saveOrder(good_id_,price, name, detail, image, num_, goodtype,account,loginname,ordernum,state,user_id);		
