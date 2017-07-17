@@ -209,7 +209,6 @@ public class OrderController {
 		orderService.findByOrdernum(ordernum);
 		orderService.commitorder(wuliu, zhiliang, fuwu, ordernum);
 		List<Order> order_list = orderService.getAll();
-			// 将图书集合添加到model当中
 		model.addAttribute("order_list", order_list);		
 		return "order";
 	
