@@ -21,7 +21,7 @@ public class CollectController {
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	@Autowired
+	@Autowired 
 	@Qualifier("collectService")
 	private CollectService collectService;
 	
