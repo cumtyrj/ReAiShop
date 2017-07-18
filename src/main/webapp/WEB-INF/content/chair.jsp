@@ -23,22 +23,7 @@
 
 <script type="text/javascript" src="source/js/jquery-1.7.2.min.js"></script>
 
-<script type="text/javascript">
-$(function(){
-    $('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Collapse this branch');
-    $('.tree li.parent_li > span').on('click', function (e) {
-        var children = $(this).parent('li.parent_li').find(' > ul > li');
-        if (children.is(":visible")) {
-            children.hide('fast');
-            $(this).attr('title', 'Expand this branch').find(' > i').addClass('icon-plus-sign').removeClass('icon-minus-sign');
-        } else {
-            children.show('fast');
-            $(this).attr('title', 'Collapse this branch').find(' > i').addClass('icon-minus-sign').removeClass('icon-plus-sign');
-        }
-        e.stopPropagation();
-    });
-});
-</script>
+<script type="text/javascript" src="source/js/jquery3.js"></script>
 
 </head>
   <body>
@@ -173,7 +158,8 @@ $(function(){
 	</div>
 </div>
 
-    <script src="source/js/jquery.min.js"></script>
+
+	<script src="source/js/jquery.min.js"></script>
     <script src="source/js/bootstrap.min.js"></script>
     <script src="source/js/scripts.js"></script>
   </body>

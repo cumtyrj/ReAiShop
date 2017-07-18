@@ -6,24 +6,8 @@
 <html>
 <head>
     <title></title>
-<script type="text/javascript">
-function changeGoodInf(){
-    var spanValue = $("#GoodInf").text();
-    $("#GoodInfInput").val(spanValue);
-    $("#GoodInfInput").show();
-    $("#GoodInf").hide();
-    $("#changeGoodInf").hide();
-    $("#GoodInfChangeOK").show();
-}
-$("#GoodInfChangeOK").click(function(){
-    var inputValue = $("#GoodInfInput").val();
-    $("#GoodInf").text(inputValue);
-    $("#GoodInfInput").hide();
-    $("#GoodInf").show();
-    $("#changeGoodInf").show();
-    $("#GoodInfChangeOK").hide();
-});
-</script>
+        <script type="text/javascript" src="source/js/jquery7.js"></script>
+
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="source/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="source/css/bootstrap-responsive.css" />

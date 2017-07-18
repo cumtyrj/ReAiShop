@@ -92,7 +92,7 @@
 				<div class="col-md-8">
 					<div class="row">
 						<div class="col-md-8">
-						<table border="1">
+						<table border="1" >
 							<tr>
 							<th>商品名称</th><th>价格</th><th>详细</th><th>图片</th>
 							<th>数量</th><th>操作</th><th>购买</th>

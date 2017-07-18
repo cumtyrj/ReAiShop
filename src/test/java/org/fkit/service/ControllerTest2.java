@@ -8,12 +8,15 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.context.WebApplicationContext;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
+
+import org.fkit.domain.User;
+
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 @TransactionConfiguration(defaultRollback = true)  
 @Transactional 
-public class ControllerTest extends BaseJunitTest {
+public class ControllerTest2 extends BaseJunitTest {
 	 @Autowired  
 	    private WebApplicationContext wac;  
 	   private MockMvc mockMvc; 
@@ -25,7 +28,7 @@ public class ControllerTest extends BaseJunitTest {
 	    
 	    @Test
 	    public void testLogin() throws Exception{
-	    	mockMvc.perform((post("/login").param("loginname","111").param("password","111"))).andExpect(status().isOk())
+	    	mockMvc.perform((post("/login").param("loginname","111").param("password","222"))).andExpect(status().isOk())
 	    	.andDo(print());
 	    }
 }

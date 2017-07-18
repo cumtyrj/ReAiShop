@@ -268,7 +268,7 @@ public class OrderController {
 		// 正文
 		builder.append(
 				"<html>Hello<body>");
-		url.append("<font color='red'>" + "You have a new order!" + "</font>");
+		url.append("<font color='red'>" + "Your goods have been sent out!" + "</font>");
 		builder.append("<br/><br/>");
 		builder.append("<div>" + url + "</div>");
 		builder.append("</body></html>");
@@ -280,7 +280,7 @@ public class OrderController {
 			sendemail.setCharset("UTF-8");
 			sendemail.addTo(user.getEmail());
 			sendemail.setFrom("cumtsqq@163.com");
-			sendemail.setSubject("新订单通知");
+			sendemail.setSubject("发货通知");
 			sendemail.setMsg(builder.toString());
 			sendemail.send();
 			System.out.println(builder.toString());

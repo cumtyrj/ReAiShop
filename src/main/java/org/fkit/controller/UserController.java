@@ -1,8 +1,6 @@
 package org.fkit.controller;
 
 
-import java.sql.Timestamp;
-import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

@@ -23,22 +23,8 @@
 
 <script type="text/javascript" src="source/js/jquery-1.7.2.min.js"></script>
 
-<script type="text/javascript">
-$(function(){
-    $('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Collapse this branch');
-    $('.tree li.parent_li > span').on('click', function (e) {
-        var children = $(this).parent('li.parent_li').find(' > ul > li');
-        if (children.is(":visible")) {
-            children.hide('fast');
-            $(this).attr('title', 'Expand this branch').find(' > i').addClass('icon-plus-sign').removeClass('icon-minus-sign');
-        } else {
-            children.show('fast');
-            $(this).attr('title', 'Collapse this branch').find(' > i').addClass('icon-minus-sign').removeClass('icon-plus-sign');
-        }
-        e.stopPropagation();
-    });
-});
-</script>
+<script type="text/javascript" src="source/js/jquery3.js"></script>
+
 <style type="text/css">
 	table{border-collapse:collapse;border-spacing:0;border-left:1px solid #888;border-top:1px solid #888;background:#efefef;}
 	th,td{border-right:1px solid #888;border-bottom:1px solid #888;padding:5px 15px;}

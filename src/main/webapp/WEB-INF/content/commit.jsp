@@ -6,13 +6,10 @@
 <html>
 <head lang="zh-CN">
 <title>订单评分</title>
-<style>
-	.stars{ overflow: hidden; clear: both; margin: 10px; padding: 10px; border: 1px saddlebrown solid;}
-	.stars span{ float: left; height: 30px; line-height: 30px; cursor:default;}
-	.stars i{width: 30px; height: 30px; line-height: 30px; float: left; margin-right: 30px; background: #ccc; color: #fff; text-align: center; cursor:default; font-style: normal;}
-	.stars .on{ color: #a71417;}
-</style>
+
 <script src="source/js/jquerycommit.min.js"></script>
+<link href="source/css/commit.css" rel="stylesheet">
+
 </head>
 <body>
 <form method="post" action="submitcommit">
@@ -46,47 +43,7 @@
 <a class="btn btn-danger" href="submitcommit?ordernum=${good.ordernum}" role="button">提交评价</a>                      	
 
 </form>
-<script>
-    $(function(){
-        /*
-        * 鼠标点击，该元素包括该元素之前的元素获得样式,并给隐藏域input赋值
-        * 鼠标移入，样式随鼠标移动
-        * 鼠标移出，样式移除但被鼠标点击的该元素和之前的元素样式不变
-        * 每次触发事件，移除所有样式，并重新获得样式
-        * */
-        var stars = $('.stars');
-        var Len = stars.length;
-        //遍历每个评分的容器
-        for(i=0;i<Len;i++){
-            //每次触发事件，清除该项父容器下所有子元素的样式所有样式
-            function clearAll(obj){
-                obj.parent().children('i').removeClass('on');
-            }
-            stars.eq(i).find('i').click(function(){
-                var num = $(this).index();
-                clearAll($(this));
-                //当前包括前面的元素都加上样式
-                $(this).addClass('on').prevAll('i').addClass('on');
-                //给隐藏域input赋值
-                $(this).siblings('input').val(num);
-            });
-            stars.eq(i).find('i').mouseover(function(){
-                var num = $(this).index();
-                clearAll($(this));
-                //当前包括前面的元素都加上样式
-                $(this).addClass('on').prevAll('i').addClass('on');
-            });
-            stars.eq(i).find('i').mouseout(function(){
-                clearAll($(this));
-                //触发点击事件后input有值
-                var score = $(this).siblings('input').val();
-                for(i=0;i<score;i++){
-                    $(this).parent().find('i').eq(i).addClass('on');
-                }
-            });
-        }
-    })
-</script>
+
 
 </body>
 </html>
