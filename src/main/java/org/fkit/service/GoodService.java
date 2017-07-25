@@ -19,8 +19,8 @@ public interface GoodService {
 	//所有
 	Good selectByGoodId(int good_id);
 	
-	//所有用品
-	List<Good> getAll();
+			//所有用品
+			List<Good> getAll();
 	
 	//管理员添加物品
 	Good addnewGood(String name,String goodtype,String price,String detail,Integer inventory);

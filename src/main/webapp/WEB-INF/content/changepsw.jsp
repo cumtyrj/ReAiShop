@@ -18,13 +18,7 @@
   </head>
   <body>
 <span style="color:red;font-weight:bold">
-<%
-if (request.getAttribute("err")!=null)
-{
-	
-	out.println(request.getAttribute("err")+"<br/>");	
-}
-%>
+
 </span>
     <div class="container-fluid">
 	<div class="row">

@@ -12,33 +12,13 @@
     <link rel="stylesheet" type="text/css" href="source/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="source/css/bootstrap-responsive.css" />
     <link rel="stylesheet" type="text/css" href="source/css/styleee.css" />
+    <link rel="stylesheet" type="text/css" href="source/css/style1.css" />
     <script type="text/javascript" src="source/js/jquery2.js"></script>
     <script type="text/javascript" src="source/js/jquery2.sorted.js"></script>
     <script type="text/javascript" src="source/js/bootstrap1.js"></script>
     <script type="text/javascript" src="source/js/ckform.js"></script>
     <script type="text/javascript" src="source/js/common.js"></script>
-	
-    <style type="text/css">
-        body {font-size: 20px;
-		font-size: 20px;
-            padding-bottom: 40px;
-            background-color:#e9e7ef;
-        }
-        .sidebar-nav {
-            padding: 9px 0;
-        }
 
-        @media (max-width: 980px) {
-            /* Enable use of floated navbar text */
-            .navbar-text.pull-right {
-                float: none;
-                padding-left: 5px;
-                padding-right: 5px;
-            }
-        }
-
-
-    </style>
 </head>
 <body >
 <form  method="post" action="addnewgood">

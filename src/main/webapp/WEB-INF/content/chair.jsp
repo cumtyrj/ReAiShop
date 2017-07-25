@@ -27,9 +27,7 @@
 
 </head>
   <body>
-<%!int n=0; %>
-<%application.setAttribute("counter", String.valueOf(n++)); %>
-<p>已有<%out.print(n); %>个访问者</p>
+
     <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
@@ -132,7 +130,7 @@
 				<div class="col-md-8">
 					<div class="row">
 						<div class="col-md-8">
-						<table border="1" id="table">
+						<table border="1" id="table" >
 							<tr>
 							<th>商品名称</th><th>价格</th><th>详细</th><th>图片</th>
 							<th>操作</th>

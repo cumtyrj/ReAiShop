@@ -82,6 +82,8 @@ public class OrderController {
 		String name=cart.getName();
 		String price=cart.getPrice();
 		int num=cart.getNum();
+//		String num = request.getParameter("num");
+//		int num_ = Integer.parseInt(num);
 		Integer price_=Integer.parseInt(price.trim());
 		String detail=cart.getDetail();
 		String image=cart.getImage();

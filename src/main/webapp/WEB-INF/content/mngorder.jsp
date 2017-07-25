@@ -17,28 +17,8 @@
     <script type="text/javascript" src="source/js/bootstrap1.js"></script>
     <script type="text/javascript" src="source/js/ckform.js"></script>
     <script type="text/javascript" src="source/js/common.js"></script>
+	    <link rel="stylesheet" type="text/css" href="source/css/style1.css" />
 	
-    <style type="text/css">
-        body {font-size: 20px;
-		font-size: 20px;
-            padding-bottom: 40px;
-            background-color:#e9e7ef;
-        }
-        .sidebar-nav {
-            padding: 9px 0;
-        }
-
-        @media (max-width: 980px) {
-            /* Enable use of floated navbar text */
-            .navbar-text.pull-right {
-                float: none;
-                padding-left: 5px;
-                padding-right: 5px;
-            }
-        }
-
-
-    </style>
 </head>
 <body >
 <form class="form-inline definewidth m20" action="#" method="get">

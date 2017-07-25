@@ -16,26 +16,14 @@
 
     <link href="source/css/bootstrap.min.css" rel="stylesheet">
     <link href="source/css/style.css" rel="stylesheet">
-    <style>
-	.stars{ overflow: hidden; clear: both; margin: 0px; padding: 0px; border: 0px saddlebrown solid;}
-	.stars span{ float: left; height: 30px; line-height: 30px; cursor:default;}
-	.stars i{width: 1px; height: 30px; line-height: 30px; float: left; margin-right: 30px; background: #ccc; color: #fff; text-align: center; cursor:default; font-style: normal;}
-	.stars .on{ color: #a71417;}
-</style>
+    <link href="source/css/style4.css" rel="stylesheet">
 <script src="source/js/jquerycommit.min.js"></script>
-<style type="text/css">
-	table{border-collapse:collapse;border-spacing:0;border-left:1px solid #888;border-top:1px solid #888;background:#efefef;}
-	th,td{border-right:1px solid #888;border-bottom:1px solid #888;padding:5px 15px;}
-	th{font-weight:bold;background:#ccc;}
-</style>
+<script src="source/js/jquery4.js"></script>
+<script src="source/js/jquery8.js"></script>
 
-        <script type="text/javascript">
-            $(function(){
-                $("#btnA").click(function(){
-                    $("#myForm").submit();
-                });
-            });
-        </script>
+    <link href="source/css/style3.css" rel="stylesheet">
+
+
         
   </head>
   <body>
@@ -173,46 +161,6 @@
     <script src="source/js/jquery.min.js"></script>
     <script src="source/js/bootstrap.min.js"></script>
     <script src="source/js/scripts.js"></script>
-    <script>
-    $(function(){
-        /*
-        * 鼠标点击，该元素包括该元素之前的元素获得样式,并给隐藏域input赋值
-        * 鼠标移入，样式随鼠标移动
-        * 鼠标移出，样式移除但被鼠标点击的该元素和之前的元素样式不变
-        * 每次触发事件，移除所有样式，并重新获得样式
-        * */
-        var stars = $('.stars');
-        var Len = stars.length;
-        //遍历每个评分的容器
-        for(i=0;i<Len;i++){
-            //每次触发事件，清除该项父容器下所有子元素的样式所有样式
-            function clearAll(obj){
-                obj.parent().children('i').removeClass('on');
-            }
-            stars.eq(i).find('i').click(function(){
-                var num = $(this).index();
-                clearAll($(this));
-                //当前包括前面的元素都加上样式
-                $(this).addClass('on').prevAll('i').addClass('on');
-                //给隐藏域input赋值
-                $(this).siblings('input').val(num);
-            });
-            stars.eq(i).find('i').mouseover(function(){
-                var num = $(this).index();
-                clearAll($(this));
-                //当前包括前面的元素都加上样式
-                $(this).addClass('on').prevAll('i').addClass('on');
-            });
-            stars.eq(i).find('i').mouseout(function(){
-                clearAll($(this));
-                //触发点击事件后input有值
-                var score = $(this).siblings('input').val();
-                for(i=0;i<score;i++){
-                    $(this).parent().find('i').eq(i).addClass('on');
-                }
-            });
-        }
-    })
-</script>
+ 
   </body>
 </html>

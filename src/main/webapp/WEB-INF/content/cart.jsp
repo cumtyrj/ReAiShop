@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,11 +17,8 @@
 
     <link href="source/css/bootstrap.min.css" rel="stylesheet">
     <link href="source/css/style.css" rel="stylesheet">
-<style type="text/css">
-	table{border-collapse:collapse;border-spacing:0;border-left:1px solid #888;border-top:1px solid #888;background:#efefef;}
-	th,td{border-right:1px solid #888;border-bottom:1px solid #888;padding:5px 15px;}
-	th{font-weight:bold;background:#ccc;}
-</style>
+    <link href="source/css/style3.css" rel="stylesheet">
+
   </head>
   <body>
 <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
@@ -103,7 +101,7 @@
 								<td>${good.price }</td>
 								<td>${good.detail }</td>
 								<td><img src="source/img/${good.image}" height="60"></td>
-								<td>${good.num }</td>
+								<td>${good.num}</td>
 								<td>
 								<a class="btn btn-warning" href="add?good_id=${good.good_id}" role="button">+</a>                      	
 								<br/><br/>

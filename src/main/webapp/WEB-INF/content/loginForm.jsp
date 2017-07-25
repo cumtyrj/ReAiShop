@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
  <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+ <%@ page isELIgnored ="false" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,19 +18,12 @@
     <link href="source/css/style.css" rel="stylesheet">
     <script src="source/js/jquery.1.4.2-min.js"></script>
     <script src="source/js/jquery.cookie.js"></script>
-    
+    <script src="source/js/jquery6.js"></script>
+
   </head>
 
   <body>
-<span style="color:red;font-weight:bold">
-<%
-if (request.getAttribute("err")!=null)
-{
-	
-	out.println(request.getAttribute("err")+"<br/>");	
-}
-%>
-</span>
+ 
     <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">

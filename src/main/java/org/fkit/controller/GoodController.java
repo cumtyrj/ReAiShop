@@ -169,13 +169,6 @@ public class GoodController {
 //管理员修改商品
 	@RequestMapping(value = "/mnggetgoodinf")
 	public String getGoodInf( ServletResponse response,HttpServletRequest request) throws ServletException, IOException {
-//		Good good=(Good) request.getAttribute("good");
-//		String name=good.getName();
-//		String price=good.getPrice();
-//		String detail=good.getDetail();
-//		String goodtype=good.getGoodtype();
-//		int inventory=good.getInventory();
-//		goodService.selectByGoodId(good_id_);
 		String good_id = request.getParameter("good_id");
 		int good_id_ = Integer.parseInt(good_id);
 		Good good=goodService.selectByGoodId(good_id_);
